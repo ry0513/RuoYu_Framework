@@ -1,0 +1,52 @@
+{
+    "code": 0,
+    "msg": "操作成功",
+    "data": {
+        "articleId": 9,
+        "title": "Debian11 使用 Docker",
+        "sortId": 1,
+        "foreword": "",
+        "type": 0,
+        "formatHtml": "<h4>一 ：安装</h4><p>安装 Docker</p><pre><div class=\"hljs\"><code class=\"language-bash\"><span class=\"hljs-comment\"># 安装</span>\nsudo apt install curl -y\ncurl https://get.docker.com | sudo sh\n<span class=\"hljs-comment\"># 查看版本</span>\ndocker -v</code></div></pre><p>安装 Docker Compose</p><pre><div class=\"hljs\"><code class=\"language-bash\"><span class=\"hljs-comment\"># 安装</span>\nsudo apt update\nsudo apt install docker-compose-plugin\n<span class=\"hljs-comment\"># 查看版本</span>\ndocker conpose -v</code></div></pre><h4>二：常用命令</h4><p>Docker 镜像相关</p><pre><div class=\"hljs\"><code class=\"language-bash\"><span class=\"hljs-comment\"># 打包镜像</span>\ndocker build -t [url/user/name:tag] .\n<span class=\"hljs-comment\"># 拉取指定镜像</span>\ndocker pull [url/user/name:tag]\n<span class=\"hljs-comment\"># 登陆账号</span>\ndocker login [url]\n<span class=\"hljs-comment\"># 推送指定镜像</span>\ndocker push [url/user/name:tag]\n<span class=\"hljs-comment\"># 查看本机镜像</span>\ndocker images\n<span class=\"hljs-comment\"># 删除本机指定镜像</span>\ndocker rmi [imageId]</code></div></pre><p>Docker 容器相关</p><pre><div class=\"hljs\"><code class=\"language-bash\"><span class=\"hljs-comment\"># 创建容器并启动</span>\ndocker run [url/user/name:tag]\n<span class=\"hljs-comment\"># 查看容器列表</span>\ndocker ps -a\n<span class=\"hljs-comment\"># 暂停容器</span>\ndocker pause [containerName]\n<span class=\"hljs-comment\"># 继续容器（相对于暂停）</span>\ndocker unpause [containerName]\n<span class=\"hljs-comment\"># 停止容器</span>\ndocker stop [containerName]\n<span class=\"hljs-comment\"># 启动容器（相对于停止）</span>\ndocker start [containerName]\n<span class=\"hljs-comment\"># 删除容器</span>\ndocker <span class=\"hljs-built_in\">rm</span> [containerName]\n<span class=\"hljs-comment\"># 进入运行中的容器</span>\ndocker <span class=\"hljs-built_in\">exec</span> -it [containerName] [COMMAND]\n<span class=\"hljs-comment\"># 将容器保存为镜像</span>\ndocker commit [containerName] [url/user/name:tag]</code></div></pre><p>Docker Compose 相关</p><pre><div class=\"hljs\"><code class=\"language-bash\"><span class=\"hljs-comment\"># 创建容器并启动</span>\ndocker compose up\n<span class=\"hljs-comment\"># 关闭并删除容器</span>\ndocker compose down\n<span class=\"hljs-comment\"># 查看 docker compose 启动的容器</span>\ndocker compose ps -a\n<span class=\"hljs-comment\"># 暂停 docker compose 启动的容器</span>\ndocker compose pause [service]\n<span class=\"hljs-comment\"># 继续 docker compose 启动的容器（相对于暂停）</span>\ndocker compose unpause [service]\n<span class=\"hljs-comment\"># 停止 docker compose 启动的容器</span>\ndocker compose stop [service]\n<span class=\"hljs-comment\"># 启动 docker compose 启动的容器（相对于停止）</span>\ndocker compose start [service]\n<span class=\"hljs-comment\"># 删除 docker compose 容器</span>\ndocker compose <span class=\"hljs-built_in\">rm</span> [service]\n<span class=\"hljs-comment\"># 进入运行中的 docker compose 启动的容器</span>\ndocker compose <span class=\"hljs-built_in\">exec</span> -it [service] [COMMAND]</code></div></pre><p><br></p>",
+        "tags": [
+            {
+                "tagId": 2,
+                "content": "Debian",
+                "tagArticle": {
+                    "tagId": 2,
+                    "articleId": 9,
+                    "createdAt": "2023-05-15T02:58:04.000Z",
+                    "updatedAt": "2023-05-15T02:58:04.000Z"
+                }
+            },
+            {
+                "tagId": 4,
+                "content": "日志记录",
+                "tagArticle": {
+                    "tagId": 4,
+                    "articleId": 9,
+                    "createdAt": "2023-05-15T02:58:04.000Z",
+                    "updatedAt": "2023-05-15T02:58:04.000Z"
+                }
+            },
+            {
+                "tagId": 5,
+                "content": "Docker",
+                "tagArticle": {
+                    "tagId": 5,
+                    "articleId": 9,
+                    "createdAt": "2023-05-15T02:58:05.000Z",
+                    "updatedAt": "2023-05-15T02:58:05.000Z"
+                }
+            }
+        ],
+        "sort": {
+            "sortId": 1,
+            "content": "默认分类"
+        },
+        "user": {
+            "userId": 10001,
+            "nickName": "超级管理员"
+        }
+    }
+}

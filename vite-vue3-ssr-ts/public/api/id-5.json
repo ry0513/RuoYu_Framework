@@ -1,0 +1,42 @@
+{
+    "code": 0,
+    "msg": "操作成功",
+    "data": {
+        "articleId": 5,
+        "title": "Debian11 使用 Certbot 申请SSL证书",
+        "sortId": 1,
+        "foreword": "",
+        "type": 0,
+        "formatHtml": "<blockquote>注：本篇安装时所用系统为<strong> Debian 11</strong></blockquote><h4>一：安装 Certbot</h4><pre><div class=\"hljs\"><code class=\"language-bash\"><span class=\"hljs-comment\"># 更新源</span>\nsudo apt update\n<span class=\"hljs-comment\"># 安装 certbot </span>\nsudo apt install certbot\n<span class=\"hljs-comment\"># (可选) 安装用于 nginx 的插件</span>\nsudo apt install python3-certbot-nginx</code></div></pre><h4>二：申请证书</h4><p>1. 申请单一证书</p><pre><div class=\"hljs\"><code class=\"language-bash\"><span class=\"hljs-comment\"># 仅申请证书 ( 需要自行配置HTTP认证或DNS认证 )</span>\ncertbot certonly -d example.com\n<span class=\"hljs-comment\"># 申请证书并自动配置HTTP认证，完成后自动配置HTTPS（ 配置使用nginx ）</span>\ncertbot --nginx -d example.com</code></div></pre><p>2. 申请通配符（ 仅支持DNS认证 ）</p><pre><div class=\"hljs\"><code class=\"language-bash\"><span class=\"hljs-comment\"># 需要自行配置DNS认证</span>\ncertbot certonly --manual --preferred-challenges dns -d example.com -d *.example.com</code></div></pre><p>三：查看本机申请成功的证书</p><pre style=\"text-align: start;\"><div class=\"hljs\"><code class=\"language-bash\">certbot certificates</code></div></pre><p><br></p>",
+        "tags": [
+            {
+                "tagId": 1,
+                "content": "默认标签",
+                "tagArticle": {
+                    "tagId": 1,
+                    "articleId": 5,
+                    "createdAt": "2023-05-15T02:57:49.000Z",
+                    "updatedAt": "2023-05-15T02:57:49.000Z"
+                }
+            },
+            {
+                "tagId": 2,
+                "content": "Debian",
+                "tagArticle": {
+                    "tagId": 2,
+                    "articleId": 5,
+                    "createdAt": "2023-05-15T02:57:49.000Z",
+                    "updatedAt": "2023-05-15T02:57:49.000Z"
+                }
+            }
+        ],
+        "sort": {
+            "sortId": 1,
+            "content": "默认分类"
+        },
+        "user": {
+            "userId": 10001,
+            "nickName": "超级管理员"
+        }
+    }
+}

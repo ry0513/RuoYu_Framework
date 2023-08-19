@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "cross-env NODE_PORT=6200 ts-node src/server.ts",
+    "dev": "cross-env NODE_PORT=6100 ts-node src/server.ts",
     "build:client": "vite build --ssrManifest --outDir dist/client",
     "build:server": "vite build --ssr src/entry-server.ts --outDir dist/server",
     "build": "npm run build:client && npm run build:server",

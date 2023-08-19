@@ -1,7 +1,9 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "http://127.0.0.1:6173/api",
+  baseURL: import.meta.env.SSR
+    ? `http://localhost:${process.env.NODE_PORT || 6100}/api`
+    : "/api",
   timeout: 10000,
   withCredentials: true,
 });

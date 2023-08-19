@@ -56,7 +56,7 @@ const replaceHtmlTag = (html: string) => {
 
 export async function render({
   url,
-  manifest,
+  manifest = {},
   ssrContext,
 }: {
   url: string;

@@ -1,14 +1,8 @@
 import { createApp } from "./main";
-import NProgress from "nprogress";
-import "nprogress/nprogress.css";
 
-NProgress.configure({ showSpinner: false });
 const { app, router, store } = createApp();
-router.isReady().then(() => {
-  router.beforeResolve(async () => {
-    NProgress.start();
-  });
 
+router.isReady().then(() => {
   router.beforeResolve(async (to, from) => {
     let diffed = false;
     const activated = to.matched.filter((c, i) => {
@@ -30,10 +24,6 @@ router.isReady().then(() => {
         return true;
       })
     );
-  });
-
-  router.afterEach(() => {
-    NProgress.done();
   });
   app.mount("#app");
   console.log("hydrated");
